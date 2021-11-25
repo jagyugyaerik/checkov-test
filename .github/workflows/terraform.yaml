@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       tfvars_file_name:
-        description: 'A tfvars file passed from the caller workflow'
+        description: 'Name of project space tfvars file'
         required: true
-        type: string
+        default: 'example_app'
 defaults:
   run:
     working-directory: ./modules/terraform-azure-psp/examples/complete
