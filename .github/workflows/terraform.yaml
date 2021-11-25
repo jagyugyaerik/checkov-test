@@ -7,7 +7,7 @@ on:
     inputs:
       tfvars_file_name:
         description: 'A tfvars file passed from the caller workflow'
-        default: 'terraform.tfvars'
+        default: 'example_app.tfvars'
         required: true
         type: string
 defaults:
@@ -30,7 +30,7 @@ jobs:
       - name: Checkout Source Code
         uses: actions/checkout@v2
       - name: Print the input name to STDOUT
-        run: cat ${{ env.TFVARS_FILE_PATH }}/${{ inputs.tfvars_file_name }}"
+        run: cat ${{ env.TFVARS_FILE_PATH }}/${{ inputs.tfvars_file_name }}
         env:
           TFVARS_FILE_PATH: ../../../../project_spaces
 
