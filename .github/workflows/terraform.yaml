@@ -7,7 +7,6 @@ on:
     inputs:
       tfvars_file_name:
         description: 'A tfvars file passed from the caller workflow'
-        default: 'example_app.tfvars'
         required: true
         type: string
 defaults:
